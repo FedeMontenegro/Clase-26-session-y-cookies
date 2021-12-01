@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <%- include("partials/head") %>
-
+<header><a href="/thanks">thanks</a></header>
   <body style="background-color:<%= color? color:"transparent"%>">
     <% if(locals.errors && errors){ %>
       <ul>
@@ -31,6 +31,7 @@
       <h4>Ingrese su edad</h4><input type="number" name="age" id="age">
       <button type="submit" id="accept">Enviar</button>
     </form>
+    <form action="/remove" method="post"><button type="submit">Remover Color</button></form>
   </body>
 
 </html>

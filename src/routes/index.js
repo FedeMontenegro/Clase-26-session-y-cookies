@@ -7,6 +7,6 @@ let formValidator = require("../validations/formValidator");
 router.get('/', indexController.index);
 router.post("/send", formValidator, indexController.indexProcess);
 router.get("/thanks", indexController.thanks);
-
+router.post("/remove", indexController.remove);
 
 module.exports = router;

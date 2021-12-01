@@ -41,5 +41,11 @@ module.exports = {
             title: "Gracias!",
             color: color
         })
+    },
+    remove: (req, res)=> {
+        if(req.cookies.color){
+            res.cookie("color", "", {maxAge: -1});
+        }
+        res.redirect("/");
     }
 }
